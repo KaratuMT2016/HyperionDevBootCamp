@@ -44,7 +44,7 @@ for index in range(len(string)):
 
         # the charcater at that index is left the same
         newString += string[index].lower()
-        
+
 # The alternate string is printed at the end of the for loop
 print(newString)
 
@@ -66,12 +66,10 @@ for index, word in enumerate(split_string_to_list):
     else:
         
         # print the word at that index in lower case
-        split_string_to_list1.append(word) 
+        split_string_to_list1.append(word.lower()) 
 
 # String the words to gether into a single string seprated by white space
 result_string = " ".join(split_string_to_list1) 
 
 # print the concatenated string result
 print(result_string) 
-
-
