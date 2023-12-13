@@ -64,3 +64,35 @@ while i <= 50:
         number_builder.append(str(i))
     i += 1
 print(" ".join(number_builder))
+
+
+################Strings Manipulation############
+string_list = ["John", "Victor", "Jesssica", "Brian", "Nifemi"]
+
+print(string_list)
+print(string_list[2])
+
+string_list[2] = "Sharon"
+
+print(string_list)
+
+del string_list[2]
+print(string_list)
+
+
+##########Nested List#################
+a = [1,2,3]
+b = [4,8,9]
+c = [a,b, "Tea", 16]
+
+print(c)
+
+c.remove(a)
+
+print(c)
+
+d = a[0:2]
+print("copied", d)
+
+d[1]=10
+print("copied_2", d)
