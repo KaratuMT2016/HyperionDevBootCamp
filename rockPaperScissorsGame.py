@@ -13,13 +13,13 @@ def rock_paper_scissors(choice):
         return f"You chose {choice}, and the System chose {system_choice}. You win!"
         
     elif system_choice == "Rock" and choice == "Scissors":
-        return f"You chose {choice}, and the System chose {system_choice}. You win!"
+        return f"You chose {choice}, and the System chose {system_choice}. You lose!"
         
     elif system_choice == "Paper" and choice == "Scissors":
         return f"You chose {choice}, and the System chose {system_choice}. You win!"
         
     elif system_choice == "Rock" and choice == "Scissors":
-        return f"You chose {choice}, and the System chose {system_choice}. You win!"
+        return f"You chose {choice}, and the System chose {system_choice}. You lose!"
         
     elif system_choice == "Paper" and choice == "Rock":
         return f"You chose {choice}, and the System chose {system_choice}. You lose!"
@@ -28,7 +28,7 @@ def rock_paper_scissors(choice):
         return f"You chose {choice}, and the System chose {system_choice}. You win!"
         
     elif system_choice == "Scissors" and choice == "Rock":
-        return f"You chose {choice}, and the System chose {system_choice}. You lose!"
+        return f"You chose {choice}, and the System chose {system_choice}. You win!"
         
     elif system_choice == "Scissors" and choice == "Paper":
         return f"You chose {choice}, and the System chose {system_choice}. You lose!"
