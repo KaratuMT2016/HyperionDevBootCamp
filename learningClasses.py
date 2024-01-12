@@ -20,10 +20,10 @@ class Human:
         self.age = new_age
 
 
-first_human = Human("John", 28, 6.5, "latte")
+#first_human = Human("", '' , '', "")
 
-print(first_human)
+print(Human("", '' , '', ""))
 
-first_human.change_age(26)
+#first_human.change_age(26)
 
-print(first_human)
+#print(first_human)
