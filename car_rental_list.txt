@@ -1,0 +1,4 @@
+SUV
+Coupe
+Saloon
+Lemousine

@@ -1,11 +1,11 @@
- Argentina
- India
- Japan
- South Africa
- Spain
- Washington DC
- London
- Aberdeen
- Manchester
- Abuja
+Argentina
+India
+Japan
+South Africa
+Spain
+Washington DC
+London
+Aberdeen
+Manchester
+Abuja
 Enter 'none' to exit the program.
