@@ -95,10 +95,11 @@ class Holiday:
             # Iterate through each city in the list and print it on a separate line
             for city in city_list:
                 print(city)
+    def room_types_menu():
         
     def hotel_cost(self, num_nights):
         total_hotel_stay_cost = 0
-        for key, value in Holiday.city_flight_cost.items():
+        for key, value in Holiday.hotel_price_list.items():
             if key == city_flight:
                 total_hotel_stay_cost = num_nights * value
         return total_hotel_stay_cost
