@@ -45,8 +45,8 @@ class Holiday:
             "Suv": 150,
             "Coupe": 50,
             "Saloon": 100,
-            "Lemousine": 250
-            
+            "Lemousine": 250,
+            "None":0
         }
 
     def get_integer_num_nights(prompt):
@@ -177,6 +177,7 @@ class Holiday:
     def plane_cost(self):
         total_plane_cost = 0
         for key, value in Holiday.city_flight_cost.items():
+            
             if key == city_flight:
                 total_plane_cost = value
         return total_plane_cost
@@ -196,8 +197,9 @@ class Holiday:
         rental_cost = Holiday.car_rental(holiday_instance, rental_days)
 
         total_holiday_cost = hotel_cost + plane_cost + rental_cost
-        print(f""" The cost of your flight to {city_flight} is {plane_cost}, the hotel cost is {hotel_cost}, and your car rental cost is {rental_cost}. Therefore, your total Holiday cost is {total_holiday_cost}
+        print(f"""The cost of your flight to {city_flight} is £{plane_cost}, the hotel cost is £{hotel_cost}, and your car rental cost is £{rental_cost}. Therefore, your total Holiday cost is £{total_holiday_cost}.
               """)
+        print()
 
 
 
@@ -212,14 +214,15 @@ while not city_flight == 'none':
     num_nights = Holiday.get_integer_num_nights("Please, enter the number of nights : ")
     print()
 
-    car_rental_option = input("Do you plan on renting a car (Y/N) : ").upper()
+    #car_rental_option = input("Do you plan on renting a car (Y/N) : ").upper()
 
-    if car_rental_option == 'Y':
-        Holiday.car_rental_menu()
-        car_rental_type = input("Please, enter your rental type : ").capitalize()
-        rental_days = Holiday.get_integer_rental_days("Enter the number of days for your rental : ")
-        break
-    else:
-        Holiday.holiday_cost()
-print("Thank you for using our booking system. Goodbye!")
+    #if car_rental_option == 'Y' or car_rental_option == 'N':
+    Holiday.car_rental_menu()
+    car_rental_type = input("Please, enter the type of car to rent : ").capitalize()
+    rental_days = Holiday.get_integer_rental_days("Enter the number of days for the car rental : ")
+    print()
+    break
+    
+Holiday.holiday_cost()
+print("Thank you for using our booking calculator. Goodbye!")
 print()

@@ -2,3 +2,4 @@ SUV
 Coupe
 Saloon
 Lemousine
+None - If you don't need a car rental and Zero for number of days
