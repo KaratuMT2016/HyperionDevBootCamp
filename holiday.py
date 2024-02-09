@@ -185,50 +185,41 @@ class Holiday:
                 print(city)
 
     def hotel_room_type_list():
-        # Open the file "hotel_room_types.txt" in read mode using a with statement
+        
         with open("hotel_room_types.txt", "r") as hotel_rooms:
-            # Initialize an empty list to store the hotel_rooms
+            
             hotel_room_list = []
 
-            # Iterate through each line in the file
             for lines in hotel_rooms:
-                # Remove newline characters from the line
+
                 temp = lines.strip('\n')
 
-                # Split the line into words
                 temp = temp.split()
 
-                # Join the words into a single string separated by spaces
                 joined = " ".join(temp)
 
-                # Append the joined string to the city_list
                 hotel_room_list.append(joined)
 
-            # Iterate through each hotel room type in the list and print it on a separate line
             for room in hotel_room_list:
                 print(room)
 
     def car_rental_list():
-        # Open the file "car_rental_list.txt" in read mode using a with statement
+       
         with open("car_rental_list.txt", "r") as car_rental_types:
-            # Initialize an empty list to store the car_rental_types
+            
             car_rental_type_list = []
 
-            # Iterate through each line in the file
             for lines in car_rental_types:
-                # Remove newline characters from the line
+                
                 temp = lines.strip('\n')
 
-                # Split the line into words
                 temp = temp.split()
 
-                # Join the words into a single string separated by spaces
                 joined = " ".join(temp)
 
-                # Append the joined string to the car_rental_type_list
                 car_rental_type_list.append(joined)
 
-            # Iterate through each car type in the list and print it on a separate line
+           
             for car in car_rental_type_list:
                 print(car)
 
@@ -269,13 +260,12 @@ class Holiday:
               """)
         print()
 
-# Calling the main menu()
+
 Holiday.menu()
 
-# Input a user's flight destination
 city_flight = input("Please, enter your destination: ").capitalize()
 
-# Validate a user's choice of destionation
+
 while not city_flight.isalpha() or city_flight not in Holiday.city_flight_cost:
      print("Invalid input. Please enter a valid destination.")
      Holiday.menu()
@@ -284,41 +274,40 @@ while not city_flight.isalpha() or city_flight not in Holiday.city_flight_cost:
 # Check while user's input for a destination is True:
 while not city_flight == 'none':
     
-    # Calling the Hotel room types menu - room_types_menu()
+    
     Holiday.room_types_menu()
     hotel_room_type = input("Please, enter a hotel room type: ").capitalize()
 
-    # Validate a user's choice of hotel room type
     while not hotel_room_type.isalpha() or hotel_room_type not in Holiday.hotel_price_list:
         print("Invalid input. Please enter a valid hotel room type.")
         Holiday.room_types_menu()
         hotel_room_type = input("Please, enter a hotel room type: ").capitalize()
 
-    # Input a user's number of nights to stay in the hotel room - validated using the @staticMethod
+    
     num_nights = Holiday.get_integer_num_nights("Please, enter the number of nights: ")
     print()
 
-    # Calling the car rental menu function
+    
     Holiday.car_rental_menu()
 
-    # Input a user's choice of car rental type
+    
     car_rental_type = input("Please, enter the type of car to rent: ").capitalize()
 
-    # Validate a user's choice of car rental type
+    
     while not car_rental_type.isalpha() or car_rental_type not in Holiday.car_rental_price_list:
         print("Invalid input. Please enter a valid type of car to rent.")
         Holiday.car_rental_menu()
         car_rental_type = input("Please, enter a hotel room type: ").capitalize()
 
-    # Input a user's number of days for the rental - validated using the @staticMethod
+    
     rental_days = Holiday.get_integer_rental_days("Enter the number of days for the car rental: ")
     print()
-    break # break to end the while loop
+    break
 
-# Calling the holiday_cost method on the instance
+
 Holiday.holiday_cost()
 
-# print a Goodbye! message
+
 print("Thank you for using our booking calculator. Goodbye!")
 print()
 
