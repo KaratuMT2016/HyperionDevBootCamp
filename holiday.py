@@ -54,7 +54,7 @@ END Program
 
 
 # Holiday Class created
-class Holiday:
+class Holiday():
 
     # A constructor __init__ defined to initialise Holiday Class
     def __init__(self, city_flight, hotel_room_type, num_nights, car_rental_type, rental_days) -> None:
